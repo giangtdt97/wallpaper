@@ -33,7 +33,7 @@ class SaveWallpaperController extends Controller
             $notification = Wallpaper::where('id', $id)->first();
             $notification->like_count = $notification->like_count-1;
             $notification->save();
-            return response()->json(['success' => ['Completed Delete Wallpaper out of List']], 400);
+            return response()->json(['success' => ['Completed Delete Wallpaper out of List']], 200);
         }else{
             $response['save_wallpaper'] =['success'=>'Save Wallpaper Successfully'];
             WallpaperFavorite::create([
