@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4bf045d0-3969-4bca-a80c-9c461fd9f4aa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/SaveWallpaperController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/SaveWallpaperController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/WallpaperResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/WallpaperResource.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +189,9 @@
       <workItem from="1620268040864" duration="1647000" />
       <workItem from="1620269863859" duration="1783000" />
       <workItem from="1620273349650" duration="1649000" />
-      <workItem from="1620275534055" duration="524000" />
+      <workItem from="1620275534055" duration="1550000" />
+      <workItem from="1620278619486" duration="1017000" />
+      <workItem from="1620283362084" duration="1390000" />
     </task>
     <servers />
   </component>

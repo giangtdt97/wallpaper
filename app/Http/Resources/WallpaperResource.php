@@ -17,7 +17,7 @@ class WallpaperResource extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
-            'thunbnail_image' => asset('storage/'.str_replace(".", "-medium.", $this->thumbnail_image)),
+            'thunbnail_image' => asset('storage/'.str_replace(".", "-small.", $this->thumbnail_image)),
             'image' => asset('storage/'.$this->image),
             'like_count' => $this->like_count,
             'feature' => $this->feature,
