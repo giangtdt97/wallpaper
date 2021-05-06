@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4bf045d0-3969-4bca-a80c-9c461fd9f4aa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/SaveWallpaperController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/SaveWallpaperController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Wallpaper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Wallpaper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,11 +152,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ecomerce_voyager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/vendor/voyager/wallpapers" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Xampp73\htdocs\wallpaper_server_by_Giang\resources\views\vendor\voyager\wallpapers" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Xampp73\htdocs\auth\app\Models" />
     </key>
@@ -192,7 +199,12 @@
       <workItem from="1620275534055" duration="1550000" />
       <workItem from="1620278619486" duration="1017000" />
       <workItem from="1620283362084" duration="1390000" />
-      <workItem from="1620287696693" duration="1318000" />
+      <workItem from="1620287696693" duration="1732000" />
+      <workItem from="1620289697300" duration="1656000" />
+      <workItem from="1620291564672" duration="634000" />
+      <workItem from="1620294335145" duration="1698000" />
+      <workItem from="1620296199532" duration="1642000" />
+      <workItem from="1620298107202" duration="336000" />
     </task>
     <servers />
   </component>

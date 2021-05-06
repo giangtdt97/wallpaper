@@ -7,6 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Wallpaper extends Model
 {
+    const FEATURE_ACCEPT = 1;
+    const FEATURE_BLOCK = 0;
+
+    public static function getFeatured()
+    {
+        return [
+            self::FEATURE_ACCEPT => 'ACCEPT',
+            self::FEATURE_BLOCK => 'BLOCK'
+        ];
+    }
     public function categories(){
         return $this->belongsToMany(Category::class,'category_wallpapers');
     }

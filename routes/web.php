@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,5 +21,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::group(['prefix' => 'admin'], function () {
+    Route::get('wallpapers/publish','Voyager\WallpaperController@publish')->name('wallpapers.publish');
     Voyager::routes();
 });
