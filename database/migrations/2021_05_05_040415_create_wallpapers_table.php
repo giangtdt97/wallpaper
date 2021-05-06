@@ -19,7 +19,7 @@ class CreateWallpapersTable extends Migration
             $table->longText('thumbnail_image');
             $table->longText('image');
             $table->boolean('feature');
-            $table->integer('like_count');
+            $table->integer('like_count')->default(0);
             $table->timestamps();
         });
     }

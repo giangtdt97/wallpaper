@@ -30,6 +30,9 @@ class SaveWallpaperController extends Controller
                 'wallpaper_id' => $id,
                 'user_id' => Auth::guard('api')->id() ,
             ])->delete();
+            $notification = Wallpaper::where('id', $id)->first();
+            $notification->like_count = $notification->like_count-1;
+            $notification->save();
             return response()->json(['success' => ['Completed Delete Wallpaper out of List']], 400);
         }else{
             $response['save_wallpaper'] =['success'=>'Save Wallpaper Successfully'];
@@ -37,6 +40,9 @@ class SaveWallpaperController extends Controller
                 'wallpaper_id' => $id,
                 'user_id' => Auth::guard('api')->id() ,
             ])->first();
+            $notification = Wallpaper::where('id', $id)->first();
+            $notification->like_count = $notification->like_count+1;
+            $notification->save();
         }
         return response()->json($response, Response::HTTP_OK);
     }
