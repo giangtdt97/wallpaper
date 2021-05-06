@@ -9,6 +9,10 @@ use App\Http\Controllers\Controller;
 
 class WallpaperController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth.apikey');
+    }
     public function index()
     {
         $data = Wallpaper::all();
