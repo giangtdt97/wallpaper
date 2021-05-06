@@ -40,5 +40,5 @@ Route::get('wallpaper/{id}', 'Api\WallpaperController@show');
 Route::get('wallpapers/featured', 'Api\WallpaperController@getFeatured');
 Route::get('wallpapers/popular', 'Api\WallpaperController@getPopulared');
 Route::get('wallpapers/newest', 'Api\WallpaperController@getNewest');
-Route::get('wallpaper-favorite/{id}', '\App\Http\Controllers\Api\SaveWallpaperController@storeWallpaper');
+Route::get('wallpaper-favorite/{id}', '\App\Http\Controllers\Api\SaveWallpaperController@storeWallpaper')->middleware('auth.apikey');
 Route::get('users/saved', 'AuthController@getSaved');

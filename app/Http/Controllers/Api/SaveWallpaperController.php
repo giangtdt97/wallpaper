@@ -11,10 +11,6 @@ use Illuminate\Support\Facades\Auth;
 
 class SaveWallpaperController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth.apikey');
-    }
     public function storeWallpaper($id)
     {
         if(!Auth::guard('api')->check()){
