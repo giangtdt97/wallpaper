@@ -252,9 +252,15 @@
                                         @endforeach
                                         <td class="no-sort no-click" id="bread-actions">
                                             @can('edit', $data)
+                                                @if($data->feature==1)
                                                     <a href="{{ route($dataType->slug.'.publish', array("id"=>$data->{$data->getKeyName()})) }}" class="btn btn-sm btn-danger pull-right edit">
                                                         <i class="voyager-power"></i> <span class="hidden-xs hidden-sm">{{$data->{'feature'}=='turn-off-feature'?'turn-on-feature':'turn-off-feature'}}</span>
                                                     </a>
+                                                @elseif($data->feature==0)
+                                                    <a href="{{ route($dataType->slug.'.publish', array("id"=>$data->{$data->getKeyName()})) }}" class="btn btn-sm btn-success pull-right edit">
+                                                        <i class="voyager-power"></i> <span class="hidden-xs hidden-sm">{{$data->{'feature'}=='turn-off-feature'?'turn-on-feature':'turn-off-feature'}}</span>
+                                                    </a>
+                                                @endif
                                             @endcan
                                             @can('edit', $data)
                                                 <a href="{{ route('voyager.'.$dataType->slug.'.edit', $data->{$data->getKeyName()}) }}" title="edit" class="btn btn-sm btn-primary pull-right edit">

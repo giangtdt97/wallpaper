@@ -17,6 +17,10 @@ class Wallpaper extends Model
             self::FEATURE_BLOCK => 'BLOCK'
         ];
     }
+    public function FeaturedName(){
+        $listFeatured = self::getFeatured();
+        return $listFeatured[$this->feature] ?? null;
+    }
     public function categories(){
         return $this->belongsToMany(Category::class,'category_wallpapers');
     }
