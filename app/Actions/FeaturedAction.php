@@ -19,7 +19,7 @@ class FeaturedAction extends AbstractAction
     {
         // Action button class
         return [
-            'class' => 'btn btn-sm btn-primary pull-left',
+            'class' => 'btn btn-sm btn-danger pull-right edit',
         ];
     }
 

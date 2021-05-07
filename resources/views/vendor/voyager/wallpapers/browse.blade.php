@@ -252,8 +252,8 @@
                                         @endforeach
                                         <td class="no-sort no-click" id="bread-actions">
                                             @can('edit', $data)
-                                                    <a href="{{ route($dataType->slug.'.publish', array("id"=>$data->{$data->getKeyName()})) }}" class="btn btn-sm btn-primary pull-right edit">
-                                                        <i class="voyager-edit"></i> <span class="hidden-xs hidden-sm">{{$data->{'feature'}=='BLOCK'?'ACCEPT':'BLOCK'}}</span>
+                                                    <a href="{{ route($dataType->slug.'.publish', array("id"=>$data->{$data->getKeyName()})) }}" class="btn btn-sm btn-danger pull-right edit">
+                                                        <i class="voyager-power"></i> <span class="hidden-xs hidden-sm">{{$data->{'feature'}=='turn-off-feature'?'turn-on-feature':'turn-off-feature'}}</span>
                                                     </a>
                                             @endcan
                                             @can('edit', $data)
@@ -266,6 +266,11 @@
                                                     <i class="voyager-eye"></i> <span class="hidden-xs hidden-sm">view</span>
                                                 </a>
                                             @endcan
+{{--                                                @foreach($actions as $action)--}}
+{{--                                                    @if (!method_exists($action, 'massAction'))--}}
+{{--                                                        @include('voyager::bread.partials.actions', ['action' => $action])--}}
+{{--                                                    @endif--}}
+{{--                                                @endforeach--}}
                                         </td>
                                     </tr>
                                     @endforeach
