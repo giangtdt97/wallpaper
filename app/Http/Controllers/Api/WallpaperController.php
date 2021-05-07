@@ -28,7 +28,7 @@ class WallpaperController extends Controller
     }
     public function getPopulared()
     {
-        $data = Wallpaper::where('like_count','>=',100)
+        $data = Wallpaper::where('like_count','>=',1)
             ->orderBy('like_count','desc')
             ->paginate(15);
         $getResource=WallpaperResource::collection($data);

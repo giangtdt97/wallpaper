@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4bf045d0-3969-4bca-a80c-9c461fd9f4aa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Wallpaper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Wallpaper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/WallpaperController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/WallpaperController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/voyager.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/voyager.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +141,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1s4HIXxJ8Ds5ZRP2WzpMos6d4ZO" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -152,13 +152,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/vendor/voyager/wallpapers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Xampp73\htdocs\wallpaper_server_by_Giang\app" />
       <recent name="D:\Xampp73\htdocs\wallpaper_server_by_Giang\resources\views\vendor\voyager\wallpapers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -204,7 +205,8 @@
       <workItem from="1620291564672" duration="634000" />
       <workItem from="1620294335145" duration="1698000" />
       <workItem from="1620296199532" duration="1642000" />
-      <workItem from="1620298107202" duration="336000" />
+      <workItem from="1620298107202" duration="1300000" />
+      <workItem from="1620353874894" duration="890000" />
     </task>
     <servers />
   </component>
