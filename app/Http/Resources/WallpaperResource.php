@@ -3,7 +3,6 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
-use Kryptonit3\Counter\Counter;
 
 class WallpaperResource extends JsonResource
 {
@@ -16,6 +15,8 @@ class WallpaperResource extends JsonResource
     public function toArray($request)
     {
         return [
+            'categories'=>
+                CategoryResource::collection($this->categories),
             'id' => $this->id,
             'name' => $this->name,
             'thunbnail_image' => asset('storage/'.$this->thumbnail_image),
