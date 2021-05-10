@@ -38,7 +38,7 @@ class WallpaperController extends Controller
                                 $q->where('checked_ip','=', 1);
                             })
                             ->inRandomOrder()
-                            ->paginate(11);
+                            ->take(5)->get();
                         $getResource=WallpaperResource::collection($data);
                         return $getResource;
                     }else{
@@ -49,7 +49,7 @@ class WallpaperController extends Controller
                                 $q->where('checked_ip','=', 0);
                             })
                             ->inRandomOrder()
-                            ->paginate(11);
+                            ->take(5)->get();
                         $getResource=WallpaperResource::collection($data);
                         return $getResource;
                     }
