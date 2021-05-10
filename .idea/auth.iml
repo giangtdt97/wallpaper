@@ -125,6 +125,10 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/larapack/hooks" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/react/promise" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/ejarnutowski/laravel-api-key" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/jaybizzle/crawler-detect" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/torann/geoip" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/awssat/laravel-visits" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/laravel-referer" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

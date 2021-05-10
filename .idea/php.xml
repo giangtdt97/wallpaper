@@ -120,6 +120,10 @@
       <path value="$PROJECT_DIR$/vendor/larapack/hooks" />
       <path value="$PROJECT_DIR$/vendor/react/promise" />
       <path value="$PROJECT_DIR$/vendor/ejarnutowski/laravel-api-key" />
+      <path value="$PROJECT_DIR$/vendor/jaybizzle/crawler-detect" />
+      <path value="$PROJECT_DIR$/vendor/torann/geoip" />
+      <path value="$PROJECT_DIR$/vendor/awssat/laravel-visits" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-referer" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

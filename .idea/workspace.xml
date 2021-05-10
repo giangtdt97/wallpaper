@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4bf045d0-3969-4bca-a80c-9c461fd9f4aa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/auth.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/auth.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Wallpaper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Wallpaper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/SaveWallpaperController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/SaveWallpaperController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/WallpaperController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/WallpaperController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/CategoryResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/CategoryResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/WallpaperResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/WallpaperResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cache.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,6 +150,10 @@
       <path value="$PROJECT_DIR$/vendor/larapack/hooks" />
       <path value="$PROJECT_DIR$/vendor/react/promise" />
       <path value="$PROJECT_DIR$/vendor/ejarnutowski/laravel-api-key" />
+      <path value="$PROJECT_DIR$/vendor/jaybizzle/crawler-detect" />
+      <path value="$PROJECT_DIR$/vendor/torann/geoip" />
+      <path value="$PROJECT_DIR$/vendor/awssat/laravel-visits" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-referer" />
     </include_path>
   </component>
   <component name="ProjectId" id="1s4HIXxJ8Ds5ZRP2WzpMos6d4ZO" />
@@ -151,7 +168,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../xampp/htdocs/agape" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../appTruyenV2" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -210,6 +227,17 @@
       <workItem from="1620357546432" duration="758000" />
       <workItem from="1620359830151" duration="1315000" />
       <workItem from="1620361701622" duration="1100000" />
+      <workItem from="1620363530308" duration="1503000" />
+      <workItem from="1620369996357" duration="1647000" />
+      <workItem from="1620385014827" duration="983000" />
+      <workItem from="1620614294490" duration="1655000" />
+      <workItem from="1620616231971" duration="1722000" />
+      <workItem from="1620618160679" duration="1739000" />
+      <workItem from="1620619985925" duration="1757000" />
+      <workItem from="1620621844135" duration="1742000" />
+      <workItem from="1620623676650" duration="1754000" />
+      <workItem from="1620628719750" duration="1730000" />
+      <workItem from="1620630515808" duration="1383000" />
     </task>
     <servers />
   </component>

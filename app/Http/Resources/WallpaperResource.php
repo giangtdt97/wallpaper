@@ -3,6 +3,7 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use Kryptonit3\Counter\Counter;
 
 class WallpaperResource extends JsonResource
 {
@@ -17,9 +18,10 @@ class WallpaperResource extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
-            'thunbnail_image' => asset('storage/'.str_replace(".", "-small.", $this->thumbnail_image)),
+            'thunbnail_image' => asset('storage/'.$this->thumbnail_image),
             'image' => asset('storage/'.$this->image),
             'like_count' => $this->like_count,
+            'views' => $this->view_count,
             'feature' => $this->feature,
             'created_at' => $this->created_at->format('d/m/Y'),
         ];
