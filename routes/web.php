@@ -36,6 +36,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::group(['prefix' => 'admin'], function () {
+    Route::get('feature-wallpapers', 'Admin\FeatureWallpaperController@index')->name('admin.feature');
     Route::get('wallpapers/publish','Voyager\WallpaperController@publish')->name('wallpapers.publish');
     Voyager::routes();
 });
