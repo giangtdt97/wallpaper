@@ -27,4 +27,7 @@ class Wallpaper extends Model
     public function users(){
         return $this->belongsToMany(User::class,'wallpaper_favorites');
     }
+    public function visitors(){
+        return $this->belongsToMany(Visitor::class,'visitor_favorites');
+    }
 }

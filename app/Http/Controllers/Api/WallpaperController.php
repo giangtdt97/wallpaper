@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Http\Resources\CategoryResource;
 use App\Http\Resources\WallpaperResource;
 use App\Models\Wallpaper;
+use App\Models\WallpaperFavorite;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class WallpaperController extends Controller
 {
@@ -21,7 +24,40 @@ class WallpaperController extends Controller
     {
         $wallpaper=Wallpaper::findOrFail($id);
         $wallpaper->increment('view_count');
-        return new WallpaperResource($wallpaper);
+        $wallpaperFavorite = WallpaperFavorite::where([
+            'wallpaper_id' => $id,
+            'user_id' => Auth::guard('api')->id(),
+        ])->first();
+        if($wallpaperFavorite){
+            return response()->json([
+                'categories'=>
+                    CategoryResource::collection( $wallpaper->categories),
+                'id' =>  $wallpaper->id,
+                'name' =>  $wallpaper->name,
+                'thunbnail_image' => asset('storage/'. $wallpaper->thumbnail_image),
+                'image' => asset('storage/'. $wallpaper->image),
+                'like'=>1,
+                'like_count' =>  $wallpaper->like_count,
+                'views' =>  $wallpaper->view_count,
+                'feature' =>  $wallpaper->feature,
+                'created_at' =>  $wallpaper->created_at->format('d/m/Y'),
+            ]);
+        }else{
+            return response()->json([
+                'categories'=>
+                    CategoryResource::collection( $wallpaper->categories),
+                'id' =>  $wallpaper->id,
+                'name' =>  $wallpaper->name,
+                'thunbnail_image' => asset('storage/'. $wallpaper->thumbnail_image),
+                'image' => asset('storage/'. $wallpaper->image),
+                'liked'=>0,
+                'like_count' =>  $wallpaper->like_count,
+                'views' =>  $wallpaper->view_count,
+                'feature' =>  $wallpaper->feature,
+                'created_at' =>  $wallpaper->created_at->format('d/m/Y'),
+            ]);
+        }
+
     }
 
     public function getFeatured()
