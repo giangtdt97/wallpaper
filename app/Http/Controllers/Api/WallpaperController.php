@@ -36,7 +36,7 @@ class WallpaperController extends Controller
                 'name' =>  $wallpaper->name,
                 'thunbnail_image' => asset('storage/'. $wallpaper->thumbnail_image),
                 'image' => asset('storage/'. $wallpaper->image),
-                'like'=>1,
+                'liked'=>1,
                 'like_count' =>  $wallpaper->like_count,
                 'views' =>  $wallpaper->view_count,
                 'feature' =>  $wallpaper->feature,
