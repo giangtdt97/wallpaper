@@ -41,8 +41,8 @@ Route::group([
     Route::get('wallpapers/featured', 'Api\WallpaperController@getFeatured');
     Route::get('wallpapers/popular', 'Api\WallpaperController@getPopulared');
     Route::get('wallpapers/newest', 'Api\WallpaperController@getNewest');
-    Route::post('wallpaper-favorite', 'Api\FavoriteController@likeWallpaper');
-    Route::post('wallpaper-favorite-unsaved', 'Api\FavoriteController@disLikeWallpaper');
+    Route::post('wallpaper-favorite/', 'Api\FavoriteController@likeWallpaper');
+    Route::post('wallpaper-favorite-unsaved/', 'Api\FavoriteController@disLikeWallpaper');
     Route::get('favorite', 'Api\FavoriteController@getSaved');
 });
 

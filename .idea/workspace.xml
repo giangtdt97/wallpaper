@@ -158,7 +158,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ecomerce_voyager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -258,6 +258,7 @@
       <workItem from="1620803687280" duration="752000" />
       <workItem from="1620805535124" duration="948000" />
       <workItem from="1620807373013" duration="135000" />
+      <workItem from="1620809933573" duration="787000" />
     </task>
     <servers />
   </component>
