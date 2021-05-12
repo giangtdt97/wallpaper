@@ -15,12 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', function () {
-//    return view('welcome');
-   $w=Visitor::where('device_id','=', 'sdvrvdvvdv')->first();
-   if(is_null($w)){
-       return 'null';
-   }
-    echo $w;
+    return view('welcome');
 });
 
 Auth::routes();

@@ -17,45 +17,39 @@ class WallpaperController extends Controller
 {
     public function show(Request $request)
     {
-        if (getIp()) {
+        $wallpaper = Wallpaper::findOrFail($request->wallpaper_id);
+        $wallpaper->increment('view_count');
+        $visitorFavorite = VisitorFavorite::where([
+            'wallpaper_id' => $request->wallpaper_id,
+            'visitor_id' => Visitor::where('device_id', $request->device_id)->value('id')])->first();
+        if($visitorFavorite){
             return response()->json([
-                'message' => 'not real address'
+                'categories' =>
+                    CategoryResource::collection($wallpaper->categories),
+                'id' => $wallpaper->id,
+                'name' => $wallpaper->name,
+                'thunbnail_image' => asset('storage/' . $wallpaper->thumbnail_image),
+                'image' => asset('storage/' . $wallpaper->image),
+                'liked' => 1,
+                'like_count' => $wallpaper->like_count,
+                'views' => $wallpaper->view_count,
+                'feature' => $wallpaper->feature,
+                'created_at' => $wallpaper->created_at->format('d/m/Y'),
             ]);
-        } else {
-            $wallpaper = Wallpaper::findOrFail($request->wallpaper_id);
-            $wallpaper->increment('view_count');
-            $visitorFavorite = VisitorFavorite::where([
-                'wallpaper_id' => $request->wallpaper_id,
-                'visitor_id' => Visitor::where('device_id', $request->device_id)->value('id')])->first();
-            if($visitorFavorite){
-                return response()->json([
-                    'categories' =>
-                        CategoryResource::collection($wallpaper->categories),
-                    'id' => $wallpaper->id,
-                    'name' => $wallpaper->name,
-                    'thunbnail_image' => asset('storage/' . $wallpaper->thumbnail_image),
-                    'image' => asset('storage/' . $wallpaper->image),
-                    'liked' => 1,
-                    'like_count' => $wallpaper->like_count,
-                    'views' => $wallpaper->view_count,
-                    'feature' => $wallpaper->feature,
-                    'created_at' => $wallpaper->created_at->format('d/m/Y'),
-                ]);
-            }else{
-                return response()->json([
-                    'categories' =>
-                        CategoryResource::collection($wallpaper->categories),
-                    'id' => $wallpaper->id,
-                    'name' => $wallpaper->name,
-                    'thunbnail_image' => asset('storage/' . $wallpaper->thumbnail_image),
-                    'image' => asset('storage/' . $wallpaper->image),
-                    'liked' => 0,
-                    'like_count' => $wallpaper->like_count,
-                    'views' => $wallpaper->view_count,
-                    'feature' => $wallpaper->feature,
-                    'created_at' => $wallpaper->created_at->format('d/m/Y'),
-                ]);
-            }
+        }else{
+            return response()->json([
+                'categories' =>
+                    CategoryResource::collection($wallpaper->categories),
+                'id' => $wallpaper->id,
+                'name' => $wallpaper->name,
+                'thunbnail_image' => asset('storage/' . $wallpaper->thumbnail_image),
+                'image' => asset('storage/' . $wallpaper->image),
+                'liked' => 0,
+                'like_count' => $wallpaper->like_count,
+                'views' => $wallpaper->view_count,
+                'feature' => $wallpaper->feature,
+                'created_at' => $wallpaper->created_at->format('d/m/Y'),
+            ]);
         }
     }
 

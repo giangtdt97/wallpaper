@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4bf045d0-3969-4bca-a80c-9c461fd9f4aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/FavoriteController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/SaveWallpaperController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/WallpaperController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/WallpaperController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/WallpaperResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/WallpaperResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Visitor.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Visitor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -262,7 +255,8 @@
       <workItem from="1620786213239" duration="1537000" />
       <workItem from="1620788079149" duration="1698000" />
       <workItem from="1620789940743" duration="1701000" />
-      <workItem from="1620791786541" duration="1331000" />
+      <workItem from="1620791786541" duration="1752000" />
+      <workItem from="1620793680825" duration="330000" />
     </task>
     <servers />
   </component>
