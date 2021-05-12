@@ -1,7 +1,5 @@
 <?php
 
-use App\Http\Controllers\Api\CategoryController;
-use App\Http\Controllers\Api\WallpaperController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -36,10 +34,10 @@ Route::group([
 });
 Route::get('categories', 'Api\CategoryController@index');
 Route::get('categories/{category_id}/wallpapers', 'Api\CategoryController@getWallpapers');
-Route::get('wallpaper/{id}', 'Api\WallpaperController@show');
+Route::post('wallpaper-detail', 'Api\WallpaperController@show');
 Route::get('wallpapers/featured', 'Api\WallpaperController@getFeatured');
 Route::get('wallpapers/popular', 'Api\WallpaperController@getPopulared');
 Route::get('wallpapers/newest', 'Api\WallpaperController@getNewest');
-Route::get('wallpaper-favorite/{id}', '\App\Http\Controllers\Api\SaveWallpaperController@storeWallpaper')->middleware('auth.apikey');
-Route::get('wallpaper-favorite-unsaved/{id}', '\App\Http\Controllers\Api\SaveWallpaperController@unSavedWallpaper')->middleware('auth.apikey');
-Route::get('users/saved', 'AuthController@getSaved');
+Route::post('wallpaper-favorite', 'Api\FavoriteController@likeWallpaper')->middleware('auth.apikey');
+Route::post('wallpaper-favorite-unsaved', 'Api\FavoriteController@disLikeWallpaper')->middleware('auth.apikey');
+Route::post('favorite', 'Api\FavoriteController@getSaved');

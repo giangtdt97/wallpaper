@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Visitor;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Route;
@@ -13,11 +14,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function (Request $request) {
+Route::get('/', function () {
 //    return view('welcome');
-//    $impre['useragent'] = $request->server('HTTP_USER_AGENT');
-//    $input['ip'] = $request->ip();
-//    echo $input['ip'];
+   $w=Visitor::where('device_id','=', 'sdvrvdvvdv')->first();
+   if(is_null($w)){
+       return 'null';
+   }
+    echo $w;
 });
 
 Auth::routes();

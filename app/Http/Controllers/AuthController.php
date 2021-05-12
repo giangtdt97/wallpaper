@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Http\Resources\WallpaperResource;
+use App\Models\Visitor;
 use App\User;
 use Carbon\Carbon;
 use Illuminate\Contracts\Session\Session;
@@ -106,16 +107,5 @@ class AuthController extends Controller
                 'updated_at' =>  $request->user()->updated_at->format('d/m/Y'),
             ]
            );
-    }
-    public function getSaved()
-    {
-        if(!Auth::guard('api')->check()){
-            return response()->json(['errors' => ['Please login to see your saved list']], 400);
-        }
-        $data = User::findOrFail(Auth::guard('api')->id())
-            ->wallpapers()
-            ->paginate(15);
-        $getResource=WallpaperResource::collection($data);
-        return $getResource;
     }
 }
