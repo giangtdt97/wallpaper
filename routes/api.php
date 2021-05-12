@@ -32,12 +32,17 @@ Route::group([
         Route::get('user', 'AuthController@user');
     });
 });
-Route::get('categories', 'Api\CategoryController@index');
-Route::get('categories/{category_id}/wallpapers', 'Api\CategoryController@getWallpapers');
-Route::get('wallpaper-detail', 'Api\WallpaperController@show');
-Route::get('wallpapers/featured', 'Api\WallpaperController@getFeatured');
-Route::get('wallpapers/popular', 'Api\WallpaperController@getPopulared');
-Route::get('wallpapers/newest', 'Api\WallpaperController@getNewest');
-Route::post('wallpaper-favorite', 'Api\FavoriteController@likeWallpaper')->middleware('auth.apikey');
-Route::post('wallpaper-favorite-unsaved', 'Api\FavoriteController@disLikeWallpaper')->middleware('auth.apikey');
-Route::get('favorite', 'Api\FavoriteController@getSaved');
+Route::group([
+    'middleware' => 'auth.apikey'
+],function(){
+    Route::get('categories', 'Api\CategoryController@index');
+    Route::get('categories/{category_id}/wallpapers', 'Api\CategoryController@getWallpapers');
+    Route::get('wallpaper-detail', 'Api\WallpaperController@show');
+    Route::get('wallpapers/featured', 'Api\WallpaperController@getFeatured');
+    Route::get('wallpapers/popular', 'Api\WallpaperController@getPopulared');
+    Route::get('wallpapers/newest', 'Api\WallpaperController@getNewest');
+    Route::post('wallpaper-favorite', 'Api\FavoriteController@likeWallpaper');
+    Route::post('wallpaper-favorite-unsaved', 'Api\FavoriteController@disLikeWallpaper');
+    Route::get('favorite', 'Api\FavoriteController@getSaved');
+});
+
