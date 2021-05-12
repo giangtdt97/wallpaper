@@ -16,60 +16,49 @@ class FavoriteController extends Controller
 {
     public function likeWallpaper(Request $request)
     {
-                    if (getIp()) {
-                        return response()->json([
-                            'message' => 'not real address'
-                        ]);
-                    } else {
-                        $visitor=Visitor::where('device_id',$request->device_id)->first();
-                        if(!$visitor){
-                            Visitor::create([
-                                'device_id'=>$request->device_id
-                            ]);
-                        }
-                        $visitorFavorite = VisitorFavorite::where([
-                            'wallpaper_id' => $request->wallpaper_id,
-                            'visitor_id' => Visitor::where('device_id', $request->device_id)->value('id')])->first();
-                        $response = array();
-                        if ($visitorFavorite) {
-                            return response()->json(['warning' => ['This Wallpaper has already in your List']], 200);
-                        } else {
-                            $response['save_wallpaper'] = ['success' => 'Save Wallpaper Successfully'];
-                            VisitorFavorite::create([
-                                'wallpaper_id' =>  $request->wallpaper_id,
-                                'visitor_id' => Visitor::where('device_id', $request->device_id)->value('id')
-                            ])->first();
-                            $wallpaper = Wallpaper::where('id',$request->wallpaper_id)->first();
-                            $wallpaper->increment('like_count');
-                        }
-                        return response()->json($response, Response::HTTP_OK);
-                    }
-                }
+        $visitor=Visitor::where('device_id',$request->device_id)->first();
+        if(!$visitor){
+            Visitor::create([
+                'device_id'=>$request->device_id
+            ]);
+        }
+        $visitorFavorite = VisitorFavorite::where([
+            'wallpaper_id' => $request->wallpaper_id,
+            'visitor_id' => Visitor::where('device_id', $request->device_id)->value('id')])->first();
+        $response = array();
+        if ($visitorFavorite) {
+            return response()->json(['warning' => ['This Wallpaper has already in your List']], 200);
+        } else {
+            $response['save_wallpaper'] = ['success' => 'Save Wallpaper Successfully'];
+            VisitorFavorite::create([
+                'wallpaper_id' =>  $request->wallpaper_id,
+                'visitor_id' => Visitor::where('device_id', $request->device_id)->value('id')
+            ])->first();
+            $wallpaper = Wallpaper::where('id',$request->wallpaper_id)->first();
+            $wallpaper->increment('like_count');
+        }
+        return response()->json($response, Response::HTTP_OK);
+    }
+
 
     public function disLikeWallpaper(Request $request)
     {
-        if (getIp()) {
-            return response()->json([
-                'message' => 'not real address'
-            ]);
-        } else {
-            $visitorFavorite = VisitorFavorite::where([
+        $visitorFavorite = VisitorFavorite::where([
+            'wallpaper_id' => $request->wallpaper_id,
+            'visitor_id' => Visitor::where('device_id', $request->device_id)->value('id')])->first();
+        $response = array();
+        if ($visitorFavorite) {
+            VisitorFavorite::where([
                 'wallpaper_id' => $request->wallpaper_id,
-                'visitor_id' => Visitor::where('device_id', $request->device_id)->value('id')])->first();
-            $response = array();
-            if ($visitorFavorite) {
-                VisitorFavorite::where([
-                    'wallpaper_id' => $request->wallpaper_id,
-                    'visitor_id' => Visitor::where('device_id', $request->device_id)->value('id')
-                ])->delete();
-                $wallpaper = Wallpaper::where('id', $request->wallpaper_id)->first();
-                $wallpaper->decrement('like_count');
-                return response()->json(['success' => ['Completely Delete this Wallpaper out of your List']], 200);
-            } else {
-                $response['warning'] = ['success' => 'This Wallpaper is not in your list'];
-            }
-            return response()->json($response, Response::HTTP_OK);
+                'visitor_id' => Visitor::where('device_id', $request->device_id)->value('id')
+            ])->delete();
+            $wallpaper = Wallpaper::where('id', $request->wallpaper_id)->first();
+            $wallpaper->decrement('like_count');
+            return response()->json(['success' => ['Completely Delete this Wallpaper out of your List']], 200);
+        } else {
+            $response['warning'] = ['success' => 'This Wallpaper is not in your list'];
         }
+        return response()->json($response, Response::HTTP_OK);
     }
     public function getSaved(Request $request)
     {
